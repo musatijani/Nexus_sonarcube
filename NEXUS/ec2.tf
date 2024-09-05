@@ -97,7 +97,7 @@ resource "aws_instance" "ec2_instance" {
   instance_type          = "t3.xlarge"
   subnet_id              = aws_default_subnet.default_az1.id
   vpc_security_group_ids = [aws_security_group.ec2_security_group_nexus.id]
-  key_name               = "kim"
+  key_name               = "musapairing"
   user_data = "${file("nexus.sh")}"
 
   tags = {
